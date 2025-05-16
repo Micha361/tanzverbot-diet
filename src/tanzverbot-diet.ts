@@ -15,8 +15,13 @@ const foodNames: string[] = [
   "Schweppes Ginger Ale",
   "Mini Babybel",
 ];
+
+// TODO foodnames wird nicht verwendet
+
 const foodCalories: number[] = [137, 64, 271, 40, 297, 125, 482, 835, 37, 59];
 const foodServings: number[] = [4, 8, 4, 12, 1, 6, 2, 2, 25, 20];
+// TODO bessere datenstruktur überlegen
+
 
 export function calcDateOnDiet(
   currentWeightKg: number,
@@ -50,6 +55,9 @@ export function calcDateOnDiet(
       655.1 + 9.563 * currentWeightKg + 1.85 * heightM * 100.0 - 4.676 * ageY,
     );
   }
+    // TODO diese formelblöcke sind fast 1zu1 gleich
+
+
   const dailyExcessCalories =
     dailyCaloriesOnDiet - dailyCaloriesBasicMetabolicRate;
   if (dailyExcessCalories <= 0) {
